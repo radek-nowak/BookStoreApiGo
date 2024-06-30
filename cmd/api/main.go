@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"book_store_api_go/api"
+)
 
-func main () {
-	fmt.Println("Hello")
+func main() {
+	app := api.NewApp()
+
+	app.Listen(":3000")
 }
